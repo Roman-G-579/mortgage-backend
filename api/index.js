@@ -116,3 +116,5 @@ app.listen(PORT, () => {
 app.get('/', (req, res) => {
     res.send('Hey this is my API running 🥳')
 })
+
+module.exports = app
