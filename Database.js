@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
-const uri = "mongodb+srv://admin:admin@zerli.shnfigq.mongodb.net/?retryWrites=true&w=majority&appName=zerli";
 
 const Database = () => {
-    mongoose.connect(uri)
+    mongoose.connect(process.env.URI)
         .then(() => {
             console.log('Connected to MongoDB');
         })
