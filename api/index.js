@@ -112,3 +112,7 @@ app.listen(PORT, () => {
     DB();
     console.log(`Server running on port ${PORT}`);
 });
+
+app.get('/', (req, res) => {
+    res.send('Hey this is my API running 🥳')
+})
