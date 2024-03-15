@@ -109,13 +109,21 @@ app.post('/change-password', async (req, res) => {
 
 });
 
+app.get(
+    '/',
+    async (_, res)=> {
+        return res.status(200).json({
+            status: 'success',
+            message: 'Connected successfully!',
+        });
+    }
+);
+
 app.listen(PORT, () => {
     DB();
     console.log(`Server running on port ${PORT}`);
 });
 
-app.get('/', (req, res) => {
-    res.send('Hey this is my API running 🥳')
-})
+
 
 module.exports = app
