@@ -9,6 +9,8 @@ const User = require('../models/UserSchema');
 
 
 const app = express();
+const PORT = process.env.PORT || 3002;
+
 app.use(bodyParser.json());
 
 const cors = require('cors');
@@ -107,7 +109,6 @@ app.post('/change-password', async (req, res) => {
 
 });
 
-const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
     DB();
     console.log(`Server running on port ${PORT}`);
