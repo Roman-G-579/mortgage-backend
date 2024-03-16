@@ -14,7 +14,9 @@ const PORT = process.env.PORT || 3002;
 app.use(bodyParser.json());
 
 const cors = require('cors');
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000'
+}));
 
 
 const transporter = nodemailer.createTransport({
