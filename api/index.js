@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 
 const cors = require('cors');
 let corsOptions = {
-    origin: 'https://localhost:3000',
+    origin: 'https://mortgage-frontend-five.vercel.app/',
     optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions));
