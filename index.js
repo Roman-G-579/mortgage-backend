@@ -3,9 +3,9 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const DB = require('../Database');
-const Contact = require('../models/ContactSchema');
-const User = require('../models/UserSchema');
+const DB = require('./Database');
+const Contact = require('./models/ContactSchema');
+const User = require('./models/UserSchema');
 
 
 const app = express();
