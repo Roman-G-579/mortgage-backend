@@ -75,7 +75,9 @@ app.post('/register', async (req, res) => {
 
 app.post('/login', async (req, res) => {
 
+    console.log("test0" + req.body);
     const user = await User.findOne({email: req.body.email});
+    console.log("test1" + user);
 
     if (user && user.password === req.body.password) {
 
@@ -83,7 +85,7 @@ app.post('/login', async (req, res) => {
     } else {
         res.status(401).send('Invalid credentials');
     }
-
+    console.log("test2" + user);
 });
 
 app.post('/recovery', async (req, res) => {
