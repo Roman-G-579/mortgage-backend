@@ -14,11 +14,7 @@ const PORT = process.env.PORT || 3002;
 app.use(bodyParser.json());
 
 const cors = require('cors');
-let corsOptions = {
-    origin: 'https://mortgage-frontend-five.vercel.app/',
-    optionsSuccessStatus: 200
-}
-app.use(cors(corsOptions));
+app.use(cors());
 
 
 const transporter = nodemailer.createTransport({
