@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
+const uri = "mongodb+srv://Roman:Aa123456@cluster0.zxm7p9z.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 
 
 const Database = () => {
-    mongoose.connect(process.env.MONGODB_URI)
+    mongoose.connect(uri)
         .then(() => {
             console.log('Connected to MongoDB');
         })
